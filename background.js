@@ -4,6 +4,9 @@ chrome.runtime.onInstalled.addListener(() => {
   })
 })
 
+const extensions = 'https://developer.chrome.com/docs/extensions'
+const webstore = 'https://developer.chrome.com/docs/webstore'
+
 chrome.action.onClicked.addListener(async (tab) => {
   if (tab.url.startsWith(extensions) || tab.url.startsWith(webstore)) {
     // 检索动作标记，检查扩展状态是否为“ON”或“OFF”
